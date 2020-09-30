@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1></h1>
+    <img></img>
+    <script>
+      var score = document.querySelector("h1")
+      var faceImage = document.querySelector("img")
+      var points = 0 
+      var cheer = new audio
+      cheer.src = "cheer.mp3"
+      score.innerHTML = points
+      faceImage.src = "Smile.jpg"   
+
+      faceImage.onclick = doSomething
+
+      function doSomething(){
+        cheer.load()
+        cheer.play()
+        points += 1
+        console.log(points)
+        score.innerHTML = points
+        if(points > 10){
+          faceImage.src = "Smile2.jpg"
+        }
+      }   
+     </script>
+  </body>
+</html>
+
